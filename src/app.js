@@ -4,9 +4,9 @@ import "dotenv/config";
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hi!');
-});
+
+app.use(express.static('public'));
+
 
 app.listen(3000, () =>
   console.log('Hello Proj. App listening on port 3000!'),
